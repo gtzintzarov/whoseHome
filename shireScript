@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
 rm MACS
-arp -an >> MACS 
+sudo arp-scan --interface=eth0 10.0.1.0/24 >> MACS 
 python processMACS.py
 
