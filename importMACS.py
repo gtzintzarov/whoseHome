@@ -1,19 +1,19 @@
 #! /usr/bin/python
 
 import csv
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 
 class networkUser:
 	def __init__(self, MAC_addr):
 		self.myMAC = MAC_addr
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(13, GPIO.OUT)
+#GPIO.setmode(GPIO.BOARD)
+#GPIO.setup(13, GPIO.OUT)
 
 
 MACSonNET = []
 Edwin = '18:AF:61:07:1E:84'
-George = 'D4:F4:6F:1E:BD:2D'
+George = 'd4:f4:6f:1e:bd:2d'
 
 with open('MACS', 'rb') as csvfile:
 	MACreader = csv.reader(csvfile, delimiter=' ')
