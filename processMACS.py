@@ -1,14 +1,14 @@
 #! /usr/bin/python
 
 import csv
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 class networkUser:
 	def __init__(self, MAC_addr):
 		self.myMAC = MAC_addr
 
-#GPIO.setmode(GPIO.BOARD)
-#GPIO.setup(13, GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(13, GPIO.OUT)
 
 
 MACSonNET = []
@@ -29,10 +29,11 @@ with open('MACS', 'rb') as csvfile:
 		if George != row[1]:
 			continue
 		if George == row[1]:
-			#GPIO.output(13, GPIO.HIGH)
 			amIon = True
 			break
 	if amIon:
-		print('George is online')
+		#print('George is online')
+		GPIO.output(13, GPIO.HIGH)
 	else:
-		print('George is offline')
+		#print('George is offline')
+		GPIO.output(13, GPIO.LOW)

@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
-cd /home/george/Desktop/whoseHome
+cd /home/pi/Desktop/whoseHome
 rm MACS
-sudo arp-scan --interface=eth0 10.0.1.0/24 >> MACS 
-python processMACS.py >> /dev/pts/0
-echo ...and drinking coffee
+sudo arp-scan --interface=wlan0 10.0.1.0/24 >> MACS 
+sudo python processMACS.py # >> /dev/pts/0
+#echo ...and drinking coffee
