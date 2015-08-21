@@ -1,0 +1,4 @@
+#! /usr/bin/bash
+
+rm MACS
+arp -D >> MACS 
