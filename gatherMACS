@@ -1,4 +1,4 @@
 #! /usr/bin/bash
 
 rm MACS
-arp -D >> MACS 
+arp -an >> MACS 
