@@ -16,13 +16,17 @@ Edwin = '18:af:61:07:1e:84'
 George = 'd4:f4:6f:1e:bd:2d'
 Lewis = 'b8:e8:56:a9:23:a5'
 amIon = False
+iii = 1
 with open('MACS', 'rb') as csvfile:
-	MACreader = csv.reader(csvfile, delimiter=' ')
+	MACreader = csv.reader(csvfile, delimiter='\t')
 	for row in MACreader:
-		MACSonNET.append(networkUser(row[3]))
-		if Edwin != row[3]:
+		if iii < 3:
+			iii = iii +1
 			continue
-		if Edwin == row[3]:
+		MACSonNET.append(networkUser(row[1]))
+		if Edwin != row[1]:
+			continue
+		if Edwin == row[1]:
 			#GPIO.output(13, GPIO.HIGH)
 			amIon = True
 			break
