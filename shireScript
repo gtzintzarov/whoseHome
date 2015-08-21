@@ -2,5 +2,5 @@
 
 rm MACS
 arp -an >> MACS 
-python importMACS.py
+python processMACS.py
 
