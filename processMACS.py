@@ -23,6 +23,8 @@ with open('MACS', 'rb') as csvfile:
 		if iii < 3:
 			iii = iii +1
 			continue
+		if row.__len__() == 0:
+			break
 		MACSonNET.append(networkUser(row[1]))
 		if Edwin != row[1]:
 			continue
