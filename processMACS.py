@@ -26,13 +26,13 @@ with open('MACS', 'rb') as csvfile:
 		if row.__len__() == 0:
 			break
 		MACSonNET.append(networkUser(row[1]))
-		if Edwin != row[1]:
+		if George != row[1]:
 			continue
-		if Edwin == row[1]:
+		if George == row[1]:
 			#GPIO.output(13, GPIO.HIGH)
 			amIon = True
 			break
 	if amIon:
-		print('Edwin is online')
+		print('George is online')
 	else:
-		print('Edwin is offline')
+		print('George is offline')
