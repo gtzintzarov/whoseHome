@@ -12,11 +12,15 @@ GPIO.setup(13, GPIO.OUT)
 
 
 MACSonNET = []
-Edwin = 'a4:5e:60:cb:4e:43'
+Edwin = '18:AF:61:07:1E:84'
+George = 'D4:F4:6F:1E:BD:2D'
 
 with open('MACS', 'rb') as csvfile:
 	MACreader = csv.reader(csvfile, delimiter=' ')
 	for row in MACreader:
 		MACSonNET.append(networkUser(row[3]))
-		if Edwin == row[3]:
-			GPIO.output(13, GPIO.HIGH)
+		if George == row[3]:
+			#GPIO.output(13, GPIO.HIGH)
+			print('George is online')
+		else:
+			print('George is offline')
