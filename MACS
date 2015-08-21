@@ -2,8 +2,10 @@ Interface: wlan0, datalink type: EN10MB (Ethernet)
 Starting arp-scan 1.8.1 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/)
 10.0.1.1	58:23:8c:b9:26:8e	(Unknown)
 10.0.1.8	58:23:8c:b9:26:90	(Unknown)
+10.0.1.12	d4:f4:6f:1e:bd:2d	(Unknown)
 10.0.1.2	3c:15:c2:c6:12:98	(Unknown)
-10.0.1.7	1c:1a:c0:7a:5d:a0	(Unknown)
+10.0.1.14	a0:88:69:76:f7:0f	(Unknown)
+10.0.1.29	a0:88:69:76:f7:0f	(Unknown)
 
-4 packets received by filter, 0 packets dropped by kernel
-Ending arp-scan 1.8.1: 256 hosts scanned in 2.180 seconds (117.43 hosts/sec). 4 responded
+6 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.8.1: 256 hosts scanned in 2.155 seconds (118.79 hosts/sec). 6 responded

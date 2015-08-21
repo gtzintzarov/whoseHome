@@ -15,6 +15,7 @@ MACSonNET = []
 Edwin = '18:af:61:07:1e:84'
 George = 'd4:f4:6f:1e:bd:2d'
 Lewis = 'b8:e8:56:a9:23:a5'
+Miller = 'd4:f4:6f:3d:35:27'
 amIon = False
 iii = 1
 with open('MACS', 'rb') as csvfile:
