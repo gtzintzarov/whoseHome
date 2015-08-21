@@ -14,18 +14,19 @@ class networkUser:
 MACSonNET = []
 Edwin = '18:af:61:07:1e:84'
 George = 'd4:f4:6f:1e:bd:2d'
+Lewis = 'b8:e8:56:a9:23:a5'
 amIon = False
 with open('MACS', 'rb') as csvfile:
 	MACreader = csv.reader(csvfile, delimiter=' ')
 	for row in MACreader:
 		MACSonNET.append(networkUser(row[3]))
-		if George != row[3]:
+		if Edwin != row[3]:
 			continue
-		if George == row[3]:
+		if Edwin == row[3]:
 			#GPIO.output(13, GPIO.HIGH)
 			amIon = True
 			break
 	if amIon:
-		print('George is online')
+		print('Edwin is online')
 	else:
-		print('George is offline')
+		print('Edwin is offline')
